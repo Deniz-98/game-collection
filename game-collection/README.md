@@ -1,16 +1,45 @@
-# React + Vite
+# Game Collection
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Deniz Nakshbandi**
 
-Currently, two official plugins are available:
+## Projektbeskrivning
+Game Collection är en React-applikation där man ska kunna söka efter spel, spara dem i en personlig samling och skriva egna anteckningar/kommentarer. All data hämtas från RAWG API och samlingen sparas i localStorage så den finns kvar även efter en hard refresh.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## API
+Jag har använt mig av [RAWG API](https://rawg.io/apidocs). Detta API:et valdes på grund av dens stora utbud på spel (stora spel samt massa indie spel).
 
-## React Compiler
+## Instruktioner för att köra projektet
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+1. Klona repot:
+   git clone https://github.com/Deniz-98/kunskapskontroll-game-collection
 
-## Expanding the ESLint configuration
+2. Gå in i mappen:
+   cd game-collection
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+3. Installera beroenden:
+   npm install
+
+4. Starta projektet:
+   npm run dev
+
+5. Öppna http://localhost:5173 i webbläsaren.
+
+## Implementerade features
+- Söka efter spel via RAWG API
+- Visa detaljsida för enskilt spel med bild och beskrivning
+- Spara spel till personlig samling (Create)
+- Redigera anteckningar om spel (Update)
+- Ta bort spel från samlingen (Delete)
+- Samlingen sparas i localStorage (finns kvar efter refresh)
+- Klickbara spelnamn i samlingen
+
+## Tekniker
+- React + Vite
+- React Router DOM
+- Axios
+- RAWG API
+- localStorage
+
+## Kända begränsningar
+- Samlingen sparas endast lokalt i webbläsaren (ingen databas)
+- Kräver en giltig RAWG API-nyckel
